@@ -1,0 +1,53 @@
+connectors:
+  X1:
+    type: PS2 PWR BTN CCA
+    pinlabels: [LED+, RED-, GRN-, COM, ?, PWR BTN, EJECT BTN]
+  X2:
+    type: DuPont
+    subtype: Male
+    pinlabels: [P1, P2, GND, 3.3V, 3V3]
+  X3:
+    type: Ryzen4600u Mini PC
+    pinlabels: [P1, P2, LED+, LED-]
+  X4:
+    type: DuPont
+    subtype: Female
+    pinlabels: [GND, 3V3, 3V3]
+  X5:
+    type: DuPont
+    subtype: Female
+    pinlabels: [P1, P2, GND, 3V3, 3V3]
+
+cables:
+  W1:
+    gauge: 0.126
+    length: 0.2
+    colors: [RD,BK,BK,YE]
+    wirecount: 4
+    shield: false
+  W2:
+    gauge: 0.126
+    length: 1
+    colors: [YE,WH]
+    wirecount: 2
+    shield: false
+  W3:
+    gauge: 0.126
+    length: 1
+    colors: [BK,RD,RD]
+    wirecount: 3
+    shield: false
+
+connections:
+  -
+    - X1: [1,2,4,6]
+    - W1: [1,2,3,4]
+    - X2: [4,3,2,1]
+  -
+    - X3: [1,2]
+    - W2: [1,2]
+    - X5: [1,2]
+  -
+    - X4: [1,2,3]
+    - W3: [1,2,3]
+    - X5: [3,4,5]
