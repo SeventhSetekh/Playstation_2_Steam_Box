@@ -10,3 +10,4 @@ Steam box on a mini PC built into a PS2 chassis.
 - USBC coupler and cable
 - HDMI coupler and cable
 ---
+![ps2_steam_box](images/steam_box_display.png)
